@@ -1,0 +1,16 @@
+{
+  "name": "rock_paper_scissor_php",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissor Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aseer KT",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
