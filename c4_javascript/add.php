@@ -41,7 +41,7 @@
 
 <?php include('templates/header.php'); ?>
 
-<h1>Add Page</h1>
+<h1>Add Profile</h1>
 <hr>
 <p class="text-danger">
   <strong>
@@ -68,10 +68,10 @@
   </p>
   <p class="row">
     <label class="col-12 col-md-2" for="summary">Summary</label>
-    <input class="col-12 col-md-3 form-control form-control-sm" type="text" name="summary" id="summary">
+    <textarea class="col-12 col-md-3 form-control form-control-sm" rows="4" name="summary" id="summary"></textarea>
   </p>
   <input class="btn btn-sm btn-primary" type="submit" name="add" value="Add">
-  <a href="index.php">Cancel</a>
+  <a class="btn btn-sm btn-secondary" href="index.php">Cancel</a>
 </form>
 
 <?php include('templates/footer.php'); ?>

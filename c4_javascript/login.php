@@ -39,7 +39,7 @@
 <!-- VIEW -->
 <?php include('templates/header.php'); ?>
 
-<h1>Login Page</h1>
+<h1>Login</h1>
 <hr>
 <p class="text-danger">
   <strong>
@@ -57,7 +57,7 @@
     <input class="col-12 col-md-3 form-control form-control-sm" type="password" name="pass" id="pass">
   </p>
   <input class="btn btn-sm btn-primary" id="login" type="submit" name="login" value="Log In">
-  <a href="index.php">Cancel</a>
+  <a class="btn btn-sm btn-secondary" href="index.php">Cancel</a>
 </form>
 
 <!-- Form Validation using JavaScript -->

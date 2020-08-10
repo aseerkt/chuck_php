@@ -3,11 +3,11 @@
   require_once('check-login.php');
   require_once('config/pdo.php');
 
-  if(!isset($_GET['profile'])){
+  if(!isset($_GET['profile_id'])){
     $_SESSION['error'] = 'GET parameter missing';
     header('Location: index.php');
   }else {
-    $stmt = $pdo->prepare('SELECT user_id FROM Profile WHERE profile_id=:pid ;');
+    $stmt = $pdo->prepare('SELECT user_id, first_name, last_name FROM Profile WHERE profile_id=:pid ;');
     $stmt->execute(array(
       ':pid' => $_GET['profile_id']
     ));
@@ -36,13 +36,16 @@
   }
 ?>
 
+<!-- VIEW -->
+
 <?php include('templates/header.php'); ?>
 
-<h1>Delete Page</h1>
+<h1>Delete Profile</h1>
 <hr>
 <form method="POST">
-  <input type="submit" name="delete" value="Delete">
-  <a href="index.php">Cancel</a>
+  <p>Confirm delete : <?= $row['first_name'].' '.$row['last_name'] ?></p>
+  <input class="btn btn-sm btn-primary" type="submit" name="delete" value="Delete">
+  <a class="btn btn-sm btn-secondary" href="index.php">Cancel</a>
 </form>
 
 <?php include('templates/footer.php'); ?>

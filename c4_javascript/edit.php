@@ -63,7 +63,7 @@
 
 <?php include('templates/header.php'); ?>
 
-<h1>hEdit Page</h1>
+<h1>Edit Profile</h1>
 <hr>
 <p class="text-danger">
   <strong>
@@ -94,11 +94,10 @@
   </p>
   <p class="row">
     <label class="col-12 col-md-2" for="summary">Summary</label>
-    <input class="col-12 col-md-3 form-control form-control-sm" type="text" name="summary" id="summary"
-      value="<?= htmlentities($data['summary']) ?>">
+    <textarea class="col-12 col-md-3 form-control form-control-sm" rows="4" name="summary" id="summary"><?= htmlentities($data['summary']) ?></textarea>
   </p>
   <input class="btn btn-sm btn-primary" type="submit" name="save" value="Save">
-  <a href="index.php">Cancel</a>
+  <a class="btn btn-sm btn-secondary" href="index.php">Cancel</a>
 </form>
 
 <?php include('templates/footer.php'); ?>
